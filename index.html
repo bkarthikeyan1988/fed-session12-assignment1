@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Session 12 Assignment 1</title>
+	<meta charset="UTF-8" />
+	<script src="js/angular.min.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+		angular.module('myApp', []).controller('filterCtrl', function($scope) {
+		    $scope.firstName = "Karthikeyan",
+		    $scope.lastName = "Balasubramanian"
+		});
+	</script>
+	<!-- Angular Script Block Ends -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- CSS Block Ends -->
+</head>
+<body ng-app="myApp">
+	<h2>The values in the scope to be CAPITAL using uppercase Filters</h2>
+	<div ng-controller="filterCtrl">
+		<p>The first name is <strong>{{ firstName | uppercase }}</strong> and the last name is <strong>{{ lastName | uppercase }}</strong></p>
+	</div>
+</body>
+</html>
